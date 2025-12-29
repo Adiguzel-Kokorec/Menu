@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adıgüzel Kokoreç - Dijital Menü</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4d00;
+            --bg: #0a0a0a;
+            --text: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* ÇAKMAKTAKİ GERÇEK LOGO VE YAZI TASARIMI */
+        .brand-header-image {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 45px;
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 22px;
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+
+        .item-dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted #333;
+            margin: 0 12px;
+            position: relative;
+            top: -4px;
+        }
+
+        .item-price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px 0;
+            border-top: 1px solid #1a1a1a;
+            font-size: 1rem;
+        }
+
+        .footer-info {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .insta-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .contact-link {
+            color: inherit;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .address-text {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+		
+		/* Logoyu SVG'nin üzerine ve tam ortasına yerleştiren class */
+    .logo {
+        position: absolute;
+        top: 70px; /* Kokoreç görselinin dikey merkezi (yaklaşık) */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 320px; /* SVG içindeki kokoreç çizimine uygun boyut */
+        height: auto;
+        z-index: 10;
+        pointer-events: none; /* Altındaki SVG elemanlarına tıklanabilirlik sağlar */
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+	<img src="logo.png" class="logo" style="max-width=100px"></img>
+        <svg class="brand-header-image" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- <defs> -->
+                <!-- <linearGradient id="meatGrad" x1="0%" y1="0%" x2="0%" y2="100%"> -->
+                    <!-- <stop offset="0%" style="stop-color:#ff8c00;stop-opacity:1" /> -->
+                    <!-- <stop offset="50%" style="stop-color:#ff4d00;stop-opacity:1" /> -->
+                    <!-- <stop offset="100%" style="stop-color:#8b2500;stop-opacity:1" /> -->
+                <!-- </linearGradient> -->
+            <!-- </defs> -->
+            <!-- <rect x="20" y="38" width="260" height="4" rx="2" fill="#444" /> -->
+            <!-- <path d="M70 40 C 70 10, 230 10, 230 40 C 230 70, 70 70, 70 40" fill="url(#meatGrad)" /> -->
+            <!-- <path d="M90 18 Q 90 40 90 62 M115 14 Q 115 40 115 66 M150 12 Q 150 40 150 68 M185 14 Q 185 40 185 66 M210 18 Q 210 40 210 62" fill="none" stroke="#000" stroke-width="2" stroke-opacity="0.4" /> -->
+            <text x="150" y="105" text-anchor="middle" font-family="Oswald, sans-serif" font-size="32" font-weight="600" fill="white" style="letter-spacing: 2px;">ADIGÜZEL <tspan fill="#ff4d00">KOKOREÇ</tspan></text>
+        </svg>
+    </header>
+
+    <div class="section">
+        <div class="section-title">Kokoreç / Köfte / Sucuk</div>
+        <div class="menu-item"><span class="item-name">Çeyrek Ekmek</span><div class="item-dots"></div><span class="item-price">115 ₺</span></div>
+        <div class="menu-item"><span class="item-name">Yarım Ekmek</span><div class="item-dots"></div><span class="item-price">230 ₺</span></div>
+        <div class="menu-item"><span class="item-name">3 Çeyrek Ekmek</span><div class="item-dots"></div><span class="item-price">345 ₺</span></div>
+        <div class="menu-item"><span class="item-name">Tam Ekmek</span><div class="item-dots"></div><span class="item-price">460 ₺</span></div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">İçecekler & Kahve</div>
+        <div class="menu-item"><span class="item-name">Ayran</span><div class="item-dots"></div><span class="item-price">20 ₺</span></div>
+        <div class="menu-item"><span class="item-name">Şalgam</span><div class="item-dots"></div><span class="item-price">40 ₺</span></div>
+        <div class="menu-item"><span class="item-name">Kola / Fanta / Ice Tea / Gazoz</span><div class="item-dots"></div><span class="item-price">40 ₺</span></div>
+        <div class="menu-item"><span class="item-name">Soda</span><div class="item-dots"></div><span class="item-price">20 ₺</span></div>
+        <div class="menu-item"><span class="item-name">Su</span><div class="item-dots"></div><span class="item-price">10 ₺</span></div>
+        <div class="menu-item" style="margin-top: 20px;">
+            <span class="item-name" style="color: var(--primary);">Türk Kahvesi</span><div class="item-dots"></div><span class="item-price">50 ₺</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <div>
+                📍 <strong>Adıgüzel Kokoreç</strong><br>
+                <span class="address-text">4 Eylül Mahallesi Lazahmet Caddesi No: 65</span>
+            </div>
+        </div>
+        <div class="footer-info">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" class="insta-icon" alt="IG">
+            <a href="https://instagram.com/adiguzelkokorec11" class="contact-link">adiguzelkokorec11</a>
+        </div>
+        <div class="footer-info">
+            📞 <a href="tel:05425783034" class="contact-link">0542 578 30 34</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
